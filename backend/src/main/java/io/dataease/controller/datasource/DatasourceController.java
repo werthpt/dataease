@@ -81,6 +81,7 @@ public class DatasourceController {
         datasource.setCreateTime(null);
         datasource.setType(updataDsRequest.getType());
         datasource.setUpdateTime(System.currentTimeMillis());
+        datasource.setId(updataDsRequest.getId());
         datasourceService.preCheckDs(datasource);
         if (StringUtils.isNotEmpty(updataDsRequest.getId())) {
             datasourceService.updateDatasource(updataDsRequest.getId(), datasource);
